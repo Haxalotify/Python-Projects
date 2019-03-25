@@ -9,7 +9,7 @@ def find_palingrams():
     pali_list = []
     for word in word_list:
         end = len(word)
-        rev_word = word[::-1]
+        rev_word = word[::-1]#word.join(reversed(word)) produces different result, not sure why
         if end > 1:
             for i in range(end):
                 if word[i:] == rev_word[:end-1]and rev_word[end-1:] in word_list:
