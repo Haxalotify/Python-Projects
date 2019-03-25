@@ -1,6 +1,6 @@
 """Find all word pair palingrams in a dictionary file."""
 import time
-start_time = time.time()
+
 import load_diction
 
 word_list = load_diction.load('2of4brif.txt')
@@ -19,7 +19,9 @@ def find_palingrams():
                 if word[:i] == rev_word[end-1:]and rev_word[:end-i] in word_list:
                     pali_list.append((rev_word[:end-1], word))
     return pali_list
+start_time = time.time()
 palingrams = find_palingrams()
+end_time = time.time()
 #sort palingrams alphabetically
 palingrams_sorted = sorted(palingrams)
 
@@ -27,5 +29,5 @@ palingrams_sorted = sorted(palingrams)
 print("\nNumber of palingrams = {}\n".format(len(palingrams_sorted)))
 for first, second in palingrams_sorted:
     print("{} {}".format(first, second))
-end_time = time.time()
+
 print("Runtime for this program was {} seconds.".format(end_time - start_time))
