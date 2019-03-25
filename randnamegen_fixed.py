@@ -1,10 +1,9 @@
-"""Generates names by randomly combining names from 2 seperate lists"""
 import sys, random
 
+print("Welcome to the Psych 'Sidekick Name Picker.'\n")
+print("A name just like Sean would pick for Gus:\n\n")
+
 def main():
-    """Choose names at random from 2 tuples of names and print to screen."""
-    print("Welcome to the Psych 'Sidekick Name Picker.'\n")
-    print("A name just like Sean would pick for Gus:\n\n")
     first = ('Baby Oil', 'Bad News', 'Big Burps')
     last = ('Appleyard', 'Bigmeat', 'Bloominshine')
 
